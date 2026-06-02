@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xB</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\App</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../App</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -661,6 +661,11 @@
               <FileName>oled.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\App\oled.c</FilePath>
+            </File>
+            <File>
+              <FileName>uln2003.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\App\uln2003.c</FilePath>
             </File>
           </Files>
         </Group>

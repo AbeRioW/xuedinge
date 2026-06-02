@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "oled.h"
 #include "tim.h"
+#include "uln2003.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -130,15 +131,18 @@ int main(void)
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
   OLED_Init();
+  ULN2003_Init();
   OLED_Clear();
   OLED_ShowString(0, 0, (uint8_t *)"Distance:", 8, 1);
   OLED_ShowString(0, 8, (uint8_t *)"---.-- cm", 8, 1);
+  OLED_ShowString(0, 16, (uint8_t *)"Motor: Stop   ", 8, 1);
   OLED_Refresh();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   static float last_distance = -1;
+  static int last_motor_state = -1;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -146,31 +150,46 @@ int main(void)
     /* USER CODE BEGIN 3 */
     float distance = HCSR04_Measure();
     
-    if (distance != last_distance)
+    int current_motor_state = (distance > 0 && distance < 5.0f) ? 1 : 0;
+    
+    if (distance != last_distance || current_motor_state != last_motor_state)
     {
       last_distance = distance;
+      last_motor_state = current_motor_state;
       
-      OLED_Clear();
       OLED_ShowString(0, 0, (uint8_t *)"Distance:", 8, 1);
       
       if (distance > 0 && distance < 400)
       {
         uint16_t int_part = (uint16_t)distance;
         uint8_t dec_part = (uint8_t)((distance - int_part) * 10);
+        
+        OLED_ShowString(0, 8, (uint8_t *)"          ", 8, 1);
+        
         OLED_ShowNum(0, 8, int_part, 3, 8, 1);
-        OLED_ShowString(24, 8, (uint8_t *)".", 8, 1);
-        OLED_ShowNum(32, 8, dec_part, 1, 8, 1);
-        OLED_ShowString(40, 8, (uint8_t *)"cm", 8, 1);
+        OLED_ShowString(18, 8, (uint8_t *)".", 8, 1);
+        OLED_ShowNum(24, 8, dec_part, 1, 8, 1);
+        OLED_ShowString(30, 8, (uint8_t *)"cm", 8, 1);
       }
       else
       {
-        OLED_ShowString(0, 8, (uint8_t *)"---.-- cm", 8, 1);
+        OLED_ShowString(0, 8, (uint8_t *)"---.-- cm  ", 8, 1);
+      }
+      
+      if (current_motor_state)
+      {
+        OLED_ShowString(0, 16, (uint8_t *)"Motor: Running", 8, 1);
+      }
+      else
+      {
+        OLED_ShowString(0, 16, (uint8_t *)"Motor: Stop   ", 8, 1);
       }
       
       OLED_Refresh();
     }
     
-    HAL_Delay(1000);
+    ULN2003_Control_By_Distance(distance);
+    HAL_Delay(50);
   }
   /* USER CODE END 3 */
 }

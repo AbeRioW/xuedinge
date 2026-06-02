@@ -20,6 +20,7 @@
 "xuedinge\stm32f1xx_hal_exti.o"
 "xuedinge\system_stm32f1xx.o"
 "xuedinge\oled.o"
+"xuedinge\uln2003.o"
 --strict --scatter "xuedinge\xuedinge.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

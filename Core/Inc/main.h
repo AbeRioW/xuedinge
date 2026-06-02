@@ -61,6 +61,14 @@ float HCSR04_Measure(void);
 #define OLED_SCL_GPIO_Port GPIOC
 #define OLED_SDA_Pin GPIO_PIN_14
 #define OLED_SDA_GPIO_Port GPIOC
+#define ULN2003_IN1_Pin GPIO_PIN_9
+#define ULN2003_IN1_GPIO_Port GPIOA
+#define ULN2003_IN2_Pin GPIO_PIN_10
+#define ULN2003_IN2_GPIO_Port GPIOA
+#define ULN2003_IN3_Pin GPIO_PIN_11
+#define ULN2003_IN3_GPIO_Port GPIOA
+#define ULN2003_IN4_Pin GPIO_PIN_12
+#define ULN2003_IN4_GPIO_Port GPIOA
 #define Trig_Pin GPIO_PIN_8
 #define Trig_GPIO_Port GPIOB
 

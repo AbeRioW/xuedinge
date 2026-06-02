@@ -29,4 +29,5 @@ xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 xuedinge\main.o: ../Core/Inc/tim.h
 xuedinge\main.o: ../Core/Inc/gpio.h
-xuedinge\main.o: ..\App\oled.h
+xuedinge\main.o: ../App/oled.h
+xuedinge\main.o: ../App/uln2003.h
