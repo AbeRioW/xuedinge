@@ -1,0 +1,30 @@
+xuedinge\gpio.o: ../Core/Src/gpio.c
+xuedinge\gpio.o: ../Core/Inc/gpio.h
+xuedinge\gpio.o: ../Core/Inc/main.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+xuedinge\gpio.o: ../Core/Inc/stm32f1xx_hal_conf.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Include/core_cm3.h
+xuedinge\gpio.o: D:\Program Files\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Include/cmsis_version.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+xuedinge\gpio.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+xuedinge\gpio.o: D:\Program Files\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+xuedinge\gpio.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h

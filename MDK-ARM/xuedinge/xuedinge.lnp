@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"xuedinge\startup_stm32f103xb.o"
+"xuedinge\main.o"
+"xuedinge\gpio.o"
+"xuedinge\tim.o"
+"xuedinge\stm32f1xx_it.o"
+"xuedinge\stm32f1xx_hal_msp.o"
+"xuedinge\stm32f1xx_hal_gpio_ex.o"
+"xuedinge\stm32f1xx_hal_tim.o"
+"xuedinge\stm32f1xx_hal_tim_ex.o"
+"xuedinge\stm32f1xx_hal.o"
+"xuedinge\stm32f1xx_hal_rcc.o"
+"xuedinge\stm32f1xx_hal_rcc_ex.o"
+"xuedinge\stm32f1xx_hal_gpio.o"
+"xuedinge\stm32f1xx_hal_dma.o"
+"xuedinge\stm32f1xx_hal_cortex.o"
+"xuedinge\stm32f1xx_hal_pwr.o"
+"xuedinge\stm32f1xx_hal_flash.o"
+"xuedinge\stm32f1xx_hal_flash_ex.o"
+"xuedinge\stm32f1xx_hal_exti.o"
+"xuedinge\system_stm32f1xx.o"
+"xuedinge\oled.o"
+--strict --scatter "xuedinge\xuedinge.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "xuedinge.map" -o xuedinge\xuedinge.axf

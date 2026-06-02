@@ -1,0 +1,32 @@
+xuedinge\main.o: ../Core/Src/main.c
+xuedinge\main.o: ../Core/Inc/main.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+xuedinge\main.o: ../Core/Inc/stm32f1xx_hal_conf.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
+xuedinge\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
+xuedinge\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
+xuedinge\main.o: ../Drivers/CMSIS/Include/core_cm3.h
+xuedinge\main.o: D:\Program Files\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+xuedinge\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
+xuedinge\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+xuedinge\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+xuedinge\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+xuedinge\main.o: D:\Program Files\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+xuedinge\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
+xuedinge\main.o: ../Core/Inc/tim.h
+xuedinge\main.o: ../Core/Inc/gpio.h
+xuedinge\main.o: ..\App\oled.h
