@@ -132,10 +132,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
   OLED_Init();
   ULN2003_Init();
+  HAL_GPIO_WritePin(LAY_GPIO_Port, LAY_Pin, GPIO_PIN_RESET);
   OLED_Clear();
   OLED_ShowString(0, 0, (uint8_t *)"Distance:", 8, 1);
   OLED_ShowString(0, 8, (uint8_t *)"---.-- cm", 8, 1);
   OLED_ShowString(0, 16, (uint8_t *)"Motor: Stop   ", 8, 1);
+  OLED_ShowString(0, 24, (uint8_t *)"Pump: Off    ", 8, 1);
   OLED_Refresh();
   /* USER CODE END 2 */
 
@@ -143,6 +145,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   static float last_distance = -1;
   static int last_motor_state = -1;
+  static int last_pump_state = -1;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -151,11 +154,13 @@ int main(void)
     float distance = HCSR04_Measure();
     
     int current_motor_state = (distance > 0 && distance < 5.0f) ? 1 : 0;
+    int current_pump_state = (distance > 0 && distance < 5.0f) ? 1 : 0;
     
-    if (distance != last_distance || current_motor_state != last_motor_state)
+    if (distance != last_distance || current_motor_state != last_motor_state || current_pump_state != last_pump_state)
     {
       last_distance = distance;
       last_motor_state = current_motor_state;
+      last_pump_state = current_pump_state;
       
       OLED_ShowString(0, 0, (uint8_t *)"Distance:", 8, 1);
       
@@ -185,7 +190,25 @@ int main(void)
         OLED_ShowString(0, 16, (uint8_t *)"Motor: Stop   ", 8, 1);
       }
       
+      if (current_pump_state)
+      {
+        OLED_ShowString(0, 24, (uint8_t *)"Pump: On     ", 8, 1);
+      }
+      else
+      {
+        OLED_ShowString(0, 24, (uint8_t *)"Pump: Off    ", 8, 1);
+      }
+      
       OLED_Refresh();
+    }
+    
+    if (current_pump_state)
+    {
+      HAL_GPIO_WritePin(LAY_GPIO_Port, LAY_Pin, GPIO_PIN_SET);
+    }
+    else
+    {
+      HAL_GPIO_WritePin(LAY_GPIO_Port, LAY_Pin, GPIO_PIN_RESET);
     }
     
     ULN2003_Control_By_Distance(distance);
